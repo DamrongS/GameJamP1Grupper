@@ -45,5 +45,7 @@ public class HyaenaMovement : MonoBehaviour
         {
             
         }
+        
+        _rigidbody2D.AddForce(new Vector2(1, 0), ForceMode2D.Force); //Pushes
     }
 }
