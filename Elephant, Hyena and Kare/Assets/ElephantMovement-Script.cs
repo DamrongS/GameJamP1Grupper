@@ -32,7 +32,7 @@ public class ElephantMovement : MonoBehaviour
     {
        
        onGround = false;
-        
+       
     }
 
     void FixedUpdate()
