@@ -1,0 +1,153 @@
+{
+    "version": 1,
+    "name": "Inputs",
+    "maps": [
+        {
+            "name": "Elephant",
+            "id": "6a91607d-b215-4e96-bd1b-a4560871ffb2",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Value",
+                    "id": "fdd3bb40-bc77-41fb-bd74-4628c1e1d21a",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "d764247c-74e8-4bb3-a81a-9ca5de2a64c7",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "dc29099a-cecb-4752-b098-0ce0338e0862",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "490f656d-8216-480c-beb6-a595194a1406",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "2652d015-4d7b-44f2-9000-dc55567c68c0",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "58f1c77c-1eae-48c9-a5f1-2ce5add5dba0",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Hyaena",
+            "id": "13a64641-aaa2-4851-bcce-4f6b2dfadd9e",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Value",
+                    "id": "2397d783-b045-461d-825a-a19a1d4a1269",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "2f24f6fc-0be7-419f-bcab-46692ab4b580",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "77feecf3-2e08-4db8-9125-c48b654b55f5",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "3313ca2f-3b2e-41e8-b6ee-10a4a8bdcc97",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "09b76892-0bbc-405b-b7fa-10cd1e2d0b6e",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "6bf89a08-2207-41d4-9c13-f222e9e7b65f",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
