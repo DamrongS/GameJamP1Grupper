@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class ElephantMovement : MonoBehaviour
+public class HyaenaMovement : MonoBehaviour
 {
     private InputAction movement;
     public float movementSpeed = 10;
@@ -11,7 +11,7 @@ public class ElephantMovement : MonoBehaviour
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        movement = InputSystem.actions.FindAction("Movement");
+        movement = InputSystem.actions.FindAction("HyaenaMovement");
     }
     private Rigidbody2D _rigidbody2D;
 
@@ -35,12 +35,11 @@ public class ElephantMovement : MonoBehaviour
     {
         Vector2 moving = movement.ReadValue<Vector2>();
         _rigidbody2D.linearVelocityX = moving.x * movementSpeed;
-        bool isInteracting = movement.IsPressed();
         
         Vector2 jumping = movement.ReadValue<Vector2>();
         if (onGround == true)
         {
-            _rigidbody2D.linearVelocityY = moving.y * jumpSpeed;
+            _rigidbody2D.linearVelocityY = jumping.y * jumpSpeed;
         }
         else if (onGround == false)
         {

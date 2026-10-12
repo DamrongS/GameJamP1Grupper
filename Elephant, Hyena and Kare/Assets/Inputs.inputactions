@@ -7,7 +7,7 @@
             "id": "6a91607d-b215-4e96-bd1b-a4560871ffb2",
             "actions": [
                 {
-                    "name": "Movement",
+                    "name": "ElephantMovement",
                     "type": "Value",
                     "id": "fdd3bb40-bc77-41fb-bd74-4628c1e1d21a",
                     "expectedControlType": "Vector2",
@@ -25,7 +25,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "ElephantMovement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -36,7 +36,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "ElephantMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -47,7 +47,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "ElephantMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -58,7 +58,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "ElephantMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -69,7 +69,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "ElephantMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
@@ -80,7 +80,7 @@
             "id": "13a64641-aaa2-4851-bcce-4f6b2dfadd9e",
             "actions": [
                 {
-                    "name": "Movement",
+                    "name": "HyaenaMovement",
                     "type": "Value",
                     "id": "2397d783-b045-461d-825a-a19a1d4a1269",
                     "expectedControlType": "Vector2",
@@ -98,7 +98,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "HyaenaMovement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -109,7 +109,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "HyaenaMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -120,7 +120,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "HyaenaMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -131,7 +131,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "HyaenaMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -142,7 +142,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "HyaenaMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
