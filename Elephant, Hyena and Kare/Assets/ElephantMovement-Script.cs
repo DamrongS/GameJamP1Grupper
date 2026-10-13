@@ -24,6 +24,9 @@ public class ElephantMovement : MonoBehaviour
         else if (collision2D.gameObject.CompareTag("Hyeana"))
         {
             onGround = true;
+
+
+
         }
 
     }
@@ -48,6 +51,7 @@ public class ElephantMovement : MonoBehaviour
         else if (onGround == false)
         {
             
+
         }
         _rigidbody2D.AddForce(new Vector2(5, 0), ForceMode2D.Force); //Pushes
 
