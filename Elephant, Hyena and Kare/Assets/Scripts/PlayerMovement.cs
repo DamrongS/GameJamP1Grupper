@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public bool onGround;
     public bool jumping = false;
     public bool canJump;
+    
     void Start()
     {
         _rigidbody2d = GetComponent<Rigidbody2D>();
@@ -24,14 +25,22 @@ public class PlayerMovement : MonoBehaviour
         onGround = false;
     }
 
-    private void OnTriggerStay2D(Collider2D collision2D)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         onGround = true;
+        if (collision.CompareTag("Platform"))
+        {
+            transform.SetParent(collision.transform);
+        }
     }
 
-    private void OnTriggerExit2D(Collider2D col)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         onGround = false;
+        if (collision.CompareTag("Platform"))
+        {
+            transform.SetParent(null);
+        }
     }
 
     // Update is called once per frame
@@ -44,22 +53,33 @@ public class PlayerMovement : MonoBehaviour
 
         _rigidbody2d.linearVelocityX = moving.x * movementSpeed * dt;
 
-        if(wantsToJump && onGround && !jumping && canJump)
+        if (wantsToJump && onGround && !jumping && canJump)
         {
             jumping = true;
             _rigidbody2d.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
-        } else if(!wantsToJump)
+        }
+        else if (!wantsToJump)
         {
             jumping = false;
         }
 
-        _animator.SetBool("isWalking", math.abs(moving.x) > 0);
+        bool isMoving = math.abs(moving.x) > 0;
 
-        if(moving.x > 0)
+        _animator.SetBool("isWalking", isMoving);
+
+        if(isMoving)
+        {
+            _rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
+        } else if(!isMoving && transform.parent.tag == "Platform")
+        {
+            _rigidbody2d.bodyType = RigidbodyType2D.Kinematic;
+        }
+
+        if (moving.x > 0)
         {
             _spriteRenderer.flipX = false;
         }
-        else if(moving.x < 0)
+        else if (moving.x < 0)
         {
             _spriteRenderer.flipX = true;
         }
