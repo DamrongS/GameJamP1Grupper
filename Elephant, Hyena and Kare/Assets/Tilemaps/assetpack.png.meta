@@ -11,9 +11,6 @@ TextureImporter:
   - first:
       213: 985073242670568466
     second: assetpack_2
-  - first:
-      213: -1132141322781117409
-    second: assetpack_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -86,7 +83,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -190,10 +187,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f14371c1773d940f0800000000000000
-      internalID: -1132141322781117409
+      spriteID: cfd927322ab7e2d4f8965050fd87bc39
+      internalID: 977668378
       vertices: []
       indices: 
       edges: []
@@ -214,8 +211,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e997962723f0bf442a29e273d5343b11
-      internalID: -612326637
+      spriteID: 17401d0f97795fb429d6f6cf1f1002b5
+      internalID: 1957430623
       vertices: []
       indices: 
       edges: []
@@ -236,8 +233,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feeabc15a415d884c86c347be8bca093
-      internalID: -1755327733
+      spriteID: e29241f73dd1c9b499dd14b8b3f4b235
+      internalID: -1192160317
       vertices: []
       indices: 
       edges: []
@@ -258,8 +255,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f45b68c3b987454ea84b7e4c128a2c4
-      internalID: -1471195538
+      spriteID: 4a6ce77a5b8eccb4f9e665a0749930cf
+      internalID: -1248841843
       vertices: []
       indices: 
       edges: []
@@ -280,8 +277,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 290d8a83e2f42fc44af6d7306e72f6ad
-      internalID: 132148342
+      spriteID: 450915cfab70e4f4f97d6f48b54244ea
+      internalID: 1797243134
       vertices: []
       indices: 
       edges: []
@@ -302,14 +299,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: def4294a3d64b81479d68f4391804ba5
-      internalID: -1001788968
+      spriteID: 0f75938af8420ce46a5fa101894946c7
+      internalID: 48383369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: assetpack_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d4b45a595b8fc4aa4e0909d9598a4e
+      internalID: -1201542947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetpack_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a392c600fba173a42830213566550fa9
+      internalID: -1527500535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetpack_11
       rect:
         serializedVersion: 2
         x: 256
@@ -324,14 +365,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39cd33849afc0c740912c4e41dabcf7d
-      internalID: -811757681
+      spriteID: a5b2f4f4902857246861b6113bccfdaf
+      internalID: 705092150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: assetpack_10
+      name: assetpack_12
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c85f02d7b8fffa4d93fac04b48d9828
+      internalID: 258459901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetpack_13
       rect:
         serializedVersion: 2
         x: 384
@@ -346,8 +409,162 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a49ccef3a30b3b44caf4b6072fbdf6a2
-      internalID: -582664362
+      spriteID: c1cae48fa95225a4abe4f1b9f22f7760
+      internalID: -214628645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetpack_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5049b2d784eea3429592edb77a0cce6
+      internalID: -1572820525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetpack_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24094dde1821c74e9b127a12b6ca9af
+      internalID: 1749810755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetpack_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196888cebd979ce47af9190b56ff14aa
+      internalID: -32692432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetpack_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba615c532051e74492a7b6e1523ae5a
+      internalID: -1414890332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetpack_18
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a14bf32a4491c144bd9bce1e70601e8
+      internalID: 1353562270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetpack_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d84d1efa2dac834e9e367af2e70605a
+      internalID: 1323102297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetpack_20
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa6b7d4c4fb0a2449649f233d6b1a46
+      internalID: -1341018561
       vertices: []
       indices: 
       edges: []
@@ -356,7 +573,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3c16e4eed12bcf944b6f1a778f8e31cd
+    spriteID: ca286d3801899b148bbbba971760d1ec
     internalID: 0
     vertices: []
     indices: 
@@ -370,15 +587,25 @@ TextureImporter:
     nameFileIdTable:
       assetpack_0: 667555433960009151
       assetpack_1: -5526376138819798724
-      assetpack_10: -582664362
+      assetpack_10: -1527500535
+      assetpack_11: 705092150
+      assetpack_12: 258459901
+      assetpack_13: -214628645
+      assetpack_14: -1572820525
+      assetpack_15: 1749810755
+      assetpack_16: -32692432
+      assetpack_17: -1414890332
+      assetpack_18: 1353562270
+      assetpack_19: 1323102297
       assetpack_2: 985073242670568466
-      assetpack_3: -1132141322781117409
-      assetpack_4: -612326637
-      assetpack_5: -1755327733
-      assetpack_6: -1471195538
-      assetpack_7: 132148342
-      assetpack_8: -1001788968
-      assetpack_9: -811757681
+      assetpack_20: -1341018561
+      assetpack_3: 977668378
+      assetpack_4: 1957430623
+      assetpack_5: -1192160317
+      assetpack_6: -1248841843
+      assetpack_7: 1797243134
+      assetpack_8: 48383369
+      assetpack_9: -1201542947
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
