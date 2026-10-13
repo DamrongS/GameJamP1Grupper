@@ -21,13 +21,26 @@ public class HyaenaMovement : MonoBehaviour
         {
             onGround = true;
         }
-        
 
+        else if (collision2D.gameObject.CompareTag("Solid"))
+        {
+            onGround = true;
+        }
 
 
     }
-    
 
+    private void OnTriggerStay2D(Collider2D collision2D)
+    {
+        if (collision2D.gameObject.CompareTag("Ground"))
+        {
+            onGround = true;
+        }
+        else if (collision2D.gameObject.CompareTag("Solid"))
+        {
+            onGround = true;
+        }
+    }
 
 
     private void OnTriggerExit2D(Collider2D collision2D)
