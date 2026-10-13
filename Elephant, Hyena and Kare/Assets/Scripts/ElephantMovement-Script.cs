@@ -19,7 +19,7 @@ public class ElephantMovement : MonoBehaviour
     }
     private Rigidbody2D _rigidbody2D;
 
-    private void OnTriggerEnter2D(Collision2D collision2D)
+    private void OnTriggerEnter2D(Collider2D collision2D)
     {
         if (collision2D.gameObject.CompareTag("Ground"))
         {
@@ -32,7 +32,7 @@ public class ElephantMovement : MonoBehaviour
 
     }
     
-    private void OnTriggerExit2D(Collision2D collision2D)
+    private void OnTriggerExit2D(Collider2D collision2D)
     {
        
        onGround = false;

@@ -763,8 +763,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream:Elephant, Hyena and Kare/Assets/Scenes/Level_1.unity
-=======
 --- !u!1 &1361418375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,7 +1766,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.325}
   m_Radius: 0.195
->>>>>>> Stashed changes:Elephant, Hyena and Kare/Assets/Level_1.unity
 --- !u!1 &1692617035
 GameObject:
   m_ObjectHideFlags: 0
