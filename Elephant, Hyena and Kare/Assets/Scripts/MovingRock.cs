@@ -5,9 +5,10 @@ using UnityEngine;
 public class MovingRock : MonoBehaviour
 {
 
-    
+    private bool hasInteracted = false;
 
-   
+
+
     Vector3 currentVelocity;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,9 +18,11 @@ public class MovingRock : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision2D)
     {
-        if (collision2D.gameObject.CompareTag("Hyeana"))
+        if (collision2D.gameObject.CompareTag("Hyeana") && !hasInteracted)
         {
-            transform.Translate(transform.up * -5f * Time.deltaTime);
+            transform.Translate(transform.up * -100f * Time.deltaTime);
+            hasInteracted = true;
+            Debug.Log(hasInteracted);
         }
        
 
