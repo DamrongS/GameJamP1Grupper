@@ -15,24 +15,22 @@ public class HyaenaMovement : MonoBehaviour
     }
     private Rigidbody2D _rigidbody2D;
 
-    private void OnCollisionEnter2D(Collision2D collision2D)
+    private void OnTriggerEnter2D(Collider2D collision2D)
     {
         if (collision2D.gameObject.CompareTag("Ground"))
         {
             onGround = true;
         }
-
-        else if (collision2D.gameObject.CompareTag("Elephant"))
-        {
-            onGround = true;
-        }
-
         
-    }
 
+
+
+    }
     
 
-    private void OnCollisionExit2D(Collision2D collision2D)
+
+
+    private void OnTriggerExit2D(Collider2D collision2D)
     {
         onGround = false;
     }

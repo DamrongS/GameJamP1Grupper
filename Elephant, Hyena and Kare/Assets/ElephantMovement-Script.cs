@@ -21,13 +21,11 @@ public class ElephantMovement : MonoBehaviour
         {
             onGround = true;
         }
-        else if (collision2D.gameObject.CompareTag("Hyeana"))
-        {
-            onGround = true;
-        }
+        
 
     }
     
+
     private void OnTriggerExit2D(Collider2D col)
     {
        
