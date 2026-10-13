@@ -50,7 +50,6 @@ public class OutlineManager : MonoBehaviour
         }
         
         texture.Apply();
-        newLookColor = setColor;
 
         return texture;
     }
@@ -58,6 +57,7 @@ public class OutlineManager : MonoBehaviour
     public void UpdatePlayerTexture()
     {
         Texture2D characterTexture2D = CopyTexture2D(gameObject.GetComponent<SpriteRenderer>().sprite.texture, newLookColor, outlineColor);
+        newLookColor = outlineColor;
 
         _spriteRenderer.sprite = Sprite.Create(characterTexture2D, _spriteRenderer.sprite.rect, new Vector2(0.5f, 0.5f));
 
