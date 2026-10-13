@@ -15,20 +15,18 @@ public class ElephantMovement : MonoBehaviour
     }
     private Rigidbody2D _rigidbody2D;
 
-    private void OnCollisionEnter2D(Collision2D collision2D)
+    private void OnTriggerEnter2D(Collider2D collision2D)
     {
         if (collision2D.gameObject.CompareTag("Ground"))
         {
             onGround = true;
         }
-        else if (collision2D.gameObject.CompareTag("Hyeana"))
-        {
-            onGround = true;
-        }
+        
 
     }
     
-    private void OnCollisionExit2D(Collision2D collision2D)
+
+    private void OnTriggerExit2D(Collider2D col)
     {
        
        onGround = false;
