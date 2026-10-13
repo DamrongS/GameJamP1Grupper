@@ -705,21 +705,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
   player: {fileID: 1485442661}
-  _levels:
-  - {fileID: 856362353}
-  - {fileID: 1732596232}
-  - {fileID: 1311790577}
-  - {fileID: 290463457}
-  moveMap:
-    m_Name: Move Map
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 698d050e-5baf-4c58-91a1-812e4da9358f
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-    m_Priority: 0
+  amountOfLevels: 4
+  movementSpeed: 1
 --- !u!114 &1389576139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,7 +734,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 84a71bd4-f50e-474e-956a-756fccae5004
+  m_DefaultActionMap: MapControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &1485442659

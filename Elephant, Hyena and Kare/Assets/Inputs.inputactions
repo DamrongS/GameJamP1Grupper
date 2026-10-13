@@ -171,6 +171,16 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "EnterLevel",
+                    "type": "Button",
+                    "id": "4dc79d00-66a4-41ce-80a6-f87e760470c8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -187,12 +197,45 @@
                 },
                 {
                     "name": "",
+                    "id": "ecfa76cc-62f5-4e93-8405-975d452e5f1a",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "25610bd9-c873-4c67-abad-16b570f4ee3e",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "MoveLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "30a2535e-cb06-4223-9a3b-e66da4a44168",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "039a3d2f-e211-4eca-9089-c64c9ecd5c95",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EnterLevel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
