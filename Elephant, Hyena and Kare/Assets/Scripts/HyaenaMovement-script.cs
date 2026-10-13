@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class HyaenaMovement : MonoBehaviour
 {
+    private SpriteRenderer _spriteRenderer;
     private InputAction movement;
     public float movementSpeed = 10;
     public float jumpSpeed = 10;
@@ -10,6 +11,7 @@ public class HyaenaMovement : MonoBehaviour
     bool onGround;
     void Start()
     {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         movement = InputSystem.actions.FindAction("HyaenaMovement");
     }
@@ -21,12 +23,12 @@ public class HyaenaMovement : MonoBehaviour
         {
             onGround = true;
         }
-        
+
 
 
 
     }
-    
+
 
 
 
@@ -39,7 +41,7 @@ public class HyaenaMovement : MonoBehaviour
     {
         Vector2 moving = movement.ReadValue<Vector2>();
         _rigidbody2D.linearVelocityX = moving.x * movementSpeed;
-        
+
         Vector2 jumping = movement.ReadValue<Vector2>();
         if (onGround == true)
         {
@@ -47,9 +49,17 @@ public class HyaenaMovement : MonoBehaviour
         }
         else if (onGround == false)
         {
-            
+
         }
-        
+
         _rigidbody2D.AddForce(new Vector2(0, 0), ForceMode2D.Force); //Pushes
+        if (moving.x < 0)
+        {
+            _spriteRenderer.flipX = true;
+        }
+        else if (moving.x > 0)
+        {
+            _spriteRenderer.flipX = false;
+        }
     }
 }
