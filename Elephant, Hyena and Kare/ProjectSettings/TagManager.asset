@@ -22,8 +22,8 @@ TagManager:
   - RockStairs
   - Hitbox
   - 
-  - 
-  - 
+  - Hyena
+  - Elephant
   - 
   - 
   - 
@@ -46,6 +46,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Hyena
+    uniqueID: 3357868181
+    locked: 0
+  - name: Elephant
+    uniqueID: 1726711753
     locked: 0
   m_RenderingLayers:
   - Default
