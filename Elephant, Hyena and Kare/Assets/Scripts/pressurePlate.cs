@@ -15,9 +15,9 @@ public class pressurePlate : MonoBehaviour
     {
         if (collision2D.gameObject.CompareTag("Hyeana") && !hasInteracted)
         {
-            objectToMove.Translate(transform.up * moveDistance * Time.deltaTime);
+            objectToMove.Translate(Vector2.up * moveDistance * Time.deltaTime);
 
-            transform.Translate(transform.up * pressurePlateMoveDis * Time.deltaTime);
+            transform.Translate(Vector2.up * pressurePlateMoveDis * Time.deltaTime);
             hasInteracted = true;
             Debug.Log(hasInteracted);
         }
