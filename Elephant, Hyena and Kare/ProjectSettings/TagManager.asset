@@ -9,15 +9,16 @@ TagManager:
   - Elephant
   - Elephant_Interaction
   - Hyena_Interaction
+  - Solid
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - GroundLayer
   - Water
   - UI
   - Animals
-  - 
+  - Flying object
   - 
   - 
   - 
