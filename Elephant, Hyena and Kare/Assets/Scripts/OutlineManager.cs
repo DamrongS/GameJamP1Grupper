@@ -37,8 +37,6 @@ public class OutlineManager : MonoBehaviour
         {
             for (int x = 0; x < texture.width; x++)
             {
-                Debug.Log($"Pixel: {x}, {y} Color: {copiedTexture.GetPixel(x, y)}");
-                
                 if (copiedTexture.GetPixel(x, y) == lookColor)
                 {
                     texture.SetPixel(x, y, setColor);
