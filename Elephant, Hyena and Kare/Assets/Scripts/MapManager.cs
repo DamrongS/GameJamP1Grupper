@@ -16,6 +16,8 @@ public class MapManager : MonoBehaviour
     
     private int _currentPos = 1;
     private int _nextPos = 1;
+
+    private bool isCurrentlyMoving = false;
     
     void Start()
     {
@@ -33,11 +35,11 @@ public class MapManager : MonoBehaviour
 
     void Update()
     {
-        if (moveRight.WasPressedThisFrame() && _currentPos < amountOfLevels)
+        if (moveRight.WasPressedThisFrame() && _currentPos < amountOfLevels && isCurrentlyMoving == false)
         {
             _nextPos++;
             Debug.Log(_nextPos);
-        } else if (moveLeft.WasPressedThisFrame() && _currentPos > 1)
+        } else if (moveLeft.WasPressedThisFrame() && _currentPos > 1 && isCurrentlyMoving == false)
         {
             _nextPos--;
             Debug.Log(_nextPos);
@@ -48,11 +50,13 @@ public class MapManager : MonoBehaviour
             Vector3 desPos = GameObject.Find($"Level_{_nextPos}").transform.position;
 
             player.position = Vector3.MoveTowards(player.position, desPos, movementSpeed * Time.deltaTime);
+            isCurrentlyMoving = true;
 
             if (Vector3.Distance(player.position, desPos) < 0.01f)
             {
                 player.position = desPos;
                 _currentPos = _nextPos;
+                isCurrentlyMoving = false;
             }
         }
 
