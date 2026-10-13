@@ -37,8 +37,6 @@ public class OutlineManager : MonoBehaviour
         {
             for (int x = 0; x < texture.width; x++)
             {
-                Debug.Log($"Pixel: {x}, {y} Color: {copiedTexture.GetPixel(x, y)}");
-                
                 if (copiedTexture.GetPixel(x, y) == lookColor)
                 {
                     texture.SetPixel(x, y, setColor);
@@ -50,7 +48,6 @@ public class OutlineManager : MonoBehaviour
         }
         
         texture.Apply();
-        newLookColor = setColor;
 
         return texture;
     }
@@ -58,6 +55,7 @@ public class OutlineManager : MonoBehaviour
     public void UpdatePlayerTexture()
     {
         Texture2D characterTexture2D = CopyTexture2D(gameObject.GetComponent<SpriteRenderer>().sprite.texture, newLookColor, outlineColor);
+        newLookColor = outlineColor;
 
         _spriteRenderer.sprite = Sprite.Create(characterTexture2D, _spriteRenderer.sprite.rect, new Vector2(0.5f, 0.5f));
 
