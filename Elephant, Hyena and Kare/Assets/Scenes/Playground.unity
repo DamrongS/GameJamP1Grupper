@@ -339,12 +339,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1626438860071542336, guid: 80fa17b34932d394780df0bd5f2dc38e, type: 3}
+  m_Sprite: {fileID: -6450306944282983609, guid: ed3de6a71215adc4e8edeac4dd2374ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.58, y: 0.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -927,12 +927,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9194090834292013607, guid: 9a72707b8616a7f4cbf81ed29f793cce, type: 3}
+  m_Sprite: {fileID: -1951611706221272396, guid: 880e2a18324eba14a9c3fec3d51df6da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.58, y: 0.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1003,8 +1003,16 @@ PrefabInstance:
       value: 0.99
       objectReference: {fileID: 0}
     - target: {fileID: 7694476446940421701, guid: 1c8e7574578af6045ba2b19a51c03314, type: 3}
+      propertyPath: onGround
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694476446940421701, guid: 1c8e7574578af6045ba2b19a51c03314, type: 3}
       propertyPath: movementSpeed
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694476446940421701, guid: 1c8e7574578af6045ba2b19a51c03314, type: 3}
+      propertyPath: showSignifierAfter
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1034,6 +1042,10 @@ PrefabInstance:
     - target: {fileID: 2329053523412434800, guid: 5a7199bf43b64d54f8fb2a9b8712d6f0, type: 3}
       propertyPath: movementSpeed
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2329053523412434800, guid: 5a7199bf43b64d54f8fb2a9b8712d6f0, type: 3}
+      propertyPath: showSignifierAfter
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3319343626579870611, guid: 5a7199bf43b64d54f8fb2a9b8712d6f0, type: 3}
       propertyPath: m_Controller
@@ -1092,10 +1104,10 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5470711203911979248, guid: 5a7199bf43b64d54f8fb2a9b8712d6f0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1234967645}
+      addedObject: {fileID: 2027845707}
     - targetCorrespondingSourceObject: {fileID: 5470711203911979248, guid: 5a7199bf43b64d54f8fb2a9b8712d6f0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2027845707}
+      addedObject: {fileID: 1234967645}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6289244757864683674, guid: 5a7199bf43b64d54f8fb2a9b8712d6f0, type: 3}
       insertIndex: -1
