@@ -77,6 +77,8 @@ public class PlayerMovement : MonoBehaviour
         isMoving = math.abs(moving.x) > 0;
 
         _animator.SetBool("isWalking", isMoving);
+        _animator.SetBool("isJumping", _rigidbody2d.linearVelocityY > 0);
+        _animator.SetBool("isFalling", _rigidbody2d.linearVelocityY < 0);
 
         if (isMoving)
         {
