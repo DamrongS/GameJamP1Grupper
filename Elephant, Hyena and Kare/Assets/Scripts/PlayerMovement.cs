@@ -30,12 +30,13 @@ public class PlayerMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
         _move = InputSystem.actions.FindAction(movementType);
         onGround = false;
+        _rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         onGround = true;
-        if (collision.CompareTag("Platform"))
+        if (collision.CompareTag("Platform") && movementType != "ElephantMovement")
         {
             transform.SetParent(collision.transform);
             _rigidbody2d.bodyType = RigidbodyType2D.Kinematic;
@@ -45,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         onGround = false;
-        if (collision.CompareTag("Platform"))
+        if (collision.CompareTag("Platform") && movementType != "ElephantMovement")
         {
             transform.SetParent(null);
             _rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
@@ -76,13 +77,15 @@ public class PlayerMovement : MonoBehaviour
         isMoving = math.abs(moving.x) > 0;
 
         _animator.SetBool("isWalking", isMoving);
+        _animator.SetBool("isJumping", _rigidbody2d.linearVelocityY > 0);
+        _animator.SetBool("isFalling", _rigidbody2d.linearVelocityY < 0);
 
         if (isMoving)
         {
             showSignifier = false;
             signifierTimer = 0;
             _rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
-        } else if(!isMoving && transform.parent.tag == "Platform")
+        } else if(!isMoving && transform.parent && transform.parent.tag == "Platform")
         {
             onGround = true;
             jumping = false;
