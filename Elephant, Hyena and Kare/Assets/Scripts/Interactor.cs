@@ -1,5 +1,5 @@
 using UnityEngine;
- 
+ // https://theindieprofessor.wordpress.com/2025/01/07/crafting-2d-games-how-to-make-a-flexible-interaction-system-using-interfaces/
 interface IInteractible
 {
     public void Interact(GameObject CallSource);

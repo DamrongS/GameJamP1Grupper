@@ -12,13 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="bb740ed5-8e7a-4a0c-a06c-88d9c01cac42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Elephant, Hyena and Kare/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Elephant, Hyena and Kare/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/jump trough.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/jump trough.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/IMG_0812.PNG.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/IMG_0812.PNG.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/IMG_0813.PNG.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/IMG_0813.PNG.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/elephant_walk.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/elephant_walk.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/hyena.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/hyena.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tilemaps/Soild Dessert.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tilemaps/Soild Dessert.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Inputs.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inputs.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +28,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Coin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeavyObjectCamerashake.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InterAct/Interactor script.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractTest.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
