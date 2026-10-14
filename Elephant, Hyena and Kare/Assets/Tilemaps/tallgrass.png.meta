@@ -5,21 +5,6 @@ TextureImporter:
   - first:
       213: 3159991131804108224
     second: tallgrass_0
-  - first:
-      213: 7050245047468457223
-    second: tallgrass_1
-  - first:
-      213: 5453338321343247449
-    second: tallgrass_2
-  - first:
-      213: 7394165384251352522
-    second: tallgrass_3
-  - first:
-      213: -6460990874273479422
-    second: tallgrass_4
-  - first:
-      213: -785272960141387372
-    second: tallgrass_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -123,7 +108,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 64
-        height: 22
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,108 +127,20 @@ TextureImporter:
       name: tallgrass_1
       rect:
         serializedVersion: 2
-        x: 18
+        x: 64
         y: 0
-        width: 9
-        height: 18
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 70d70d1548087d160800000000000000
-      internalID: 7050245047468457223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tallgrass_2
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 0
-        width: 8
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 95470bb6f462eab40800000000000000
-      internalID: 5453338321343247449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tallgrass_3
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 0
-        width: 9
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ac5aac2bd3a5d9660800000000000000
-      internalID: 7394165384251352522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tallgrass_4
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 0
-        width: 9
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 20583e91803f556a0800000000000000
-      internalID: -6460990874273479422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tallgrass_5
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 0
-        width: 7
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4999d0f37662a15f0800000000000000
-      internalID: -785272960141387372
+      spriteID: 42a9f333e96905842aaadb91e27bd218
+      internalID: -2097790770
       vertices: []
       indices: 
       edges: []
@@ -252,7 +149,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 64e786f4ecc639042b6ab06a39efee14
+    spriteID: c1ea740828c0e5b4581a1bdfd24f604c
     internalID: 0
     vertices: []
     indices: 
@@ -260,14 +157,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       tallgrass_0: 3159991131804108224
-      tallgrass_1: 7050245047468457223
-      tallgrass_2: 5453338321343247449
-      tallgrass_3: 7394165384251352522
-      tallgrass_4: -6460990874273479422
-      tallgrass_5: -785272960141387372
+      tallgrass_1: -2097790770
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
