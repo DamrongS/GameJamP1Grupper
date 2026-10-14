@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     Rigidbody2D _rigidbody2d;
     SpriteRenderer _spriteRenderer;
+    SpriteRenderer _spriteSignifier;
     InputAction _move;
     Animator _animator;
     public string movementType;
@@ -15,11 +16,17 @@ public class PlayerMovement : MonoBehaviour
     public bool onGround;
     public bool jumping = false;
     public bool canJump;
-    
+    public bool showSignifier = true;
+    public bool isMoving;
+    public float showSignifierAfter;
+
+    private float signifierTimer = 0;
+
     void Start()
     {
         _rigidbody2d = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteSignifier = transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
         _move = InputSystem.actions.FindAction(movementType);
         onGround = false;
@@ -63,14 +70,17 @@ public class PlayerMovement : MonoBehaviour
             jumping = false;
         }
 
-        bool isMoving = math.abs(moving.x) > 0;
+        isMoving = math.abs(moving.x) > 0;
 
         _animator.SetBool("isWalking", isMoving);
 
-        if(isMoving)
+        if (isMoving)
         {
+            showSignifier = false;
+            signifierTimer = 0;
             _rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
-        } else if(!isMoving && transform.parent.tag == "Platform")
+        }
+        else if (!isMoving && transform.parent.tag == "Platform")
         {
             _rigidbody2d.bodyType = RigidbodyType2D.Kinematic;
         }
@@ -82,6 +92,26 @@ public class PlayerMovement : MonoBehaviour
         else if (moving.x < 0)
         {
             _spriteRenderer.flipX = true;
+        }
+    }
+
+    void Update()
+    {
+        float dt = Time.deltaTime;
+        if (showSignifier)
+        {
+            _spriteSignifier.enabled = true;
+            signifierTimer = 0;
+        }
+        else
+        {
+            _spriteSignifier.enabled = false;
+            signifierTimer += dt;
+        }
+
+        if (signifierTimer > showSignifierAfter)
+        {
+            showSignifier = true;
         }
     }
 }
