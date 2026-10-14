@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class HeavyObjectCamerashake : MonoBehaviour
 {
     [Header("Shake Conditions")]
     public float minimumImpactSpeed;
+    public float minimumSlideSpeed;
     public bool allowSlideRumble = false;
     public string impactTag;
 
@@ -24,7 +26,6 @@ public class HeavyObjectCamerashake : MonoBehaviour
     private AudioSource audioSource;
     private IEnumerator coroutine;
     private bool isSliding = false;
-    private bool canSlide = false;
 
     [SerializeField]
     private AnimationCurve customCurve = new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(0.2f, -0.3f), new Keyframe(0.45f, 1f), new Keyframe(1f, 0f));
@@ -65,11 +66,13 @@ public class HeavyObjectCamerashake : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Elephant") && allowSlideRumble)
         {
+            Debug.Log("Reached Slide Logic");
+            
             float impactSpeed = collision.relativeVelocity.magnitude;
         
             Debug.Log(impactSpeed);
         
-            if (impactSpeed >= minimumImpactSpeed)
+            if (impactSpeed >= minimumSlideSpeed)
             {
                 Debug.Log("Reached SlideCameraShake");
                 isSliding = true;
@@ -88,6 +91,14 @@ public class HeavyObjectCamerashake : MonoBehaviour
         {
             isSliding = false;
             audioSource.Stop();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("slideOffTrigger"))
+        {
+            allowSlideRumble = false;
         }
     }
 

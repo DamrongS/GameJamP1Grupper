@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     Animator _animator;
     public string movementType;
     public int movementSpeed;
-    public int jumpPower;
+    public float jumpPower;
     public bool onGround;
     public bool jumping = false;
     public bool canJump;
@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
     {
         onGround = false;
         if (collision.CompareTag("Platform") && movementType != "ElephantMovement")
-        {
+        { 
             transform.SetParent(null);
             _rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
         }
@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         _animator.SetBool("isJumping", _rigidbody2d.linearVelocityY > 0);
         _animator.SetBool("isFalling", _rigidbody2d.linearVelocityY < 0);
 
-        Debug.Log(_rigidbody2d.linearVelocityY > 0);
+        // Debug.Log(_rigidbody2d.linearVelocityY > 0);
 
         if (isMoving)
         {

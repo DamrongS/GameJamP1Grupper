@@ -11,6 +11,7 @@ TagManager:
   - Hyena_Interaction
   - Solid
   - PitBottom
+  - slideOffTrigger
   layers:
   - Default
   - TransparentFX
