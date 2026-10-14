@@ -11,7 +11,7 @@ public class disapeeringPlatform : MonoBehaviour
         enabeld = true;
     }
     
-    void FixedUpdate() // a timer thay goes to timeToToggle and then resets
+    void FixedUpdate() // a timer that goes to the timeToToggle amount and then resets
     {
         currentTime += Time.deltaTime;
         if (currentTime >= timeToToggle)
@@ -26,7 +26,7 @@ public class disapeeringPlatform : MonoBehaviour
         enabeld = !enabeld;
         foreach (Transform child in gameObject.transform)
         {
-            if (child.tag != "Hyaena") // så that the Hyaena dosen't disapper when the platform is disabled 
+            if (child.tag != "Hyaena") // så that the Hyaena doesn't disappear when the platform is disabled 
             {
             child.gameObject.SetActive(enabeld);
             }
