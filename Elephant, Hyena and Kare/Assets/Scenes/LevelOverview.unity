@@ -389,7 +389,7 @@ Transform:
   m_GameObject: {fileID: 914559100}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0.11, y: -0.08, z: 1}
   m_LocalScale: {x: 18, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -835,7 +835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MapManager
   player: {fileID: 1485442661}
   amountOfLevels: 4
-  movementSpeed: 10
+  movementSpeed: 15
 --- !u!114 &1389576139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -952,7 +952,7 @@ Transform:
   m_GameObject: {fileID: 1485442659}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8909, y: -0.25829, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
