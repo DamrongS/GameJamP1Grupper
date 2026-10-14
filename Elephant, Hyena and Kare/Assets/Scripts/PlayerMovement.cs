@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("Platform"))
         {
             transform.SetParent(collision.transform);
+            _rigidbody2d.bodyType = RigidbodyType2D.Kinematic;
         }
     }
 
@@ -47,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("Platform"))
         {
             transform.SetParent(null);
+            _rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
         }
     }
 
@@ -63,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         if (wantsToJump && onGround && !jumping && canJump)
         {
             jumping = true;
+            _rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
             _rigidbody2d.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
         }
         else if (!wantsToJump)
@@ -79,9 +82,10 @@ public class PlayerMovement : MonoBehaviour
             showSignifier = false;
             signifierTimer = 0;
             _rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
-        }
-        else if (!isMoving && transform.parent.tag == "Platform")
+        } else if(!isMoving && transform.parent.tag == "Platform")
         {
+            onGround = true;
+            jumping = false;
             _rigidbody2d.bodyType = RigidbodyType2D.Kinematic;
         }
 
