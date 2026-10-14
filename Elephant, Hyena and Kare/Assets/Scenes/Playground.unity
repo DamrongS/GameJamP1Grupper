@@ -258,6 +258,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> Stashed changes
 --- !u!1 &767339753
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +356,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 2c10665 (Updated Hyena animator)
 --- !u!1 &868337198
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,6 +473,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+>>>>>>> 4968d1f25703cbc2ffb84a17c122683db7a69901
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> parent of 2c10665 (Updated Hyena animator)
 --- !u!1 &893186690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+    m_AddedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3001037458145639794, guid: 1c8e7574578af6045ba2b19a51c03314, type: 3}
       insertIndex: -1
@@ -1354,6 +1370,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5470711203911979248, guid: 5a7199bf43b64d54f8fb2a9b8712d6f0, type: 3}
       insertIndex: -1
