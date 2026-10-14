@@ -1160,8 +1160,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16454329fd7144994badde15b0b592bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineManager
-  outlineColor: {r: 0.54088044, g: 0.54088044, b: 0.54088044, a: 1}
-  newLookColor: {r: 1, g: 1, b: 1, a: 0}
+  _spriteSheet: []
+  outlineColor: []
+  newLookColor: []
   changeColor: 0
 --- !u!1 &271540596
 GameObject:
@@ -4233,8 +4234,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16454329fd7144994badde15b0b592bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineManager
-  outlineColor: {r: 0.49685526, g: 0.49685526, b: 0.49685526, a: 1}
-  newLookColor: {r: 1, g: 1, b: 1, a: 0}
+  _spriteSheet: []
+  outlineColor: []
+  newLookColor: []
   changeColor: 0
 --- !u!1 &614391490
 GameObject:
@@ -4517,8 +4519,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16454329fd7144994badde15b0b592bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineManager
-  outlineColor: {r: 0.49685526, g: 0.49685526, b: 0.49685526, a: 1}
-  newLookColor: {r: 1, g: 1, b: 1, a: 0}
+  _spriteSheet: []
+  outlineColor: []
+  newLookColor: []
   changeColor: 0
 --- !u!1001 &681844484
 PrefabInstance:
@@ -4756,8 +4759,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16454329fd7144994badde15b0b592bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineManager
-  outlineColor: {r: 0.52201253, g: 0.52201253, b: 0.52201253, a: 1}
-  newLookColor: {r: 0, g: 0, b: 0, a: 0}
+  _spriteSheet: []
+  outlineColor: []
+  newLookColor: []
   changeColor: 0
 --- !u!1 &721307474
 GameObject:
@@ -5041,8 +5045,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16454329fd7144994badde15b0b592bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineManager
-  outlineColor: {r: 0.49685526, g: 0.49685526, b: 0.49685526, a: 1}
-  newLookColor: {r: 1, g: 1, b: 1, a: 0}
+  _spriteSheet: []
+  outlineColor: []
+  newLookColor: []
   changeColor: 0
 --- !u!1 &726162296
 GameObject:
@@ -5528,8 +5533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16454329fd7144994badde15b0b592bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineManager
-  outlineColor: {r: 0.49685526, g: 0.49685526, b: 0.49685526, a: 1}
-  newLookColor: {r: 1, g: 1, b: 1, a: 0}
+  _spriteSheet: []
+  outlineColor: []
+  newLookColor: []
   changeColor: 0
 --- !u!1 &1069552727
 GameObject:
@@ -5663,8 +5669,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16454329fd7144994badde15b0b592bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineManager
-  outlineColor: {r: 0.54088044, g: 0.54088044, b: 0.54088044, a: 1}
-  newLookColor: {r: 1, g: 1, b: 1, a: 0}
+  _spriteSheet: []
+  outlineColor: []
+  newLookColor: []
   changeColor: 0
 --- !u!1 &1099461309
 GameObject:
@@ -15177,8 +15184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16454329fd7144994badde15b0b592bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineManager
-  outlineColor: {r: 0.408805, g: 0.408805, b: 0.408805, a: 1}
-  newLookColor: {r: 1, g: 1, b: 1, a: 1}
+  _spriteSheet: []
+  outlineColor: []
+  newLookColor: []
   changeColor: 0
 --- !u!61 &1336957505
 BoxCollider2D:
@@ -16307,8 +16315,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16454329fd7144994badde15b0b592bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineManager
-  outlineColor: {r: 0.54088044, g: 0.54088044, b: 0.54088044, a: 1}
-  newLookColor: {r: 1, g: 1, b: 1, a: 0}
+  _spriteSheet: []
+  outlineColor: []
+  newLookColor: []
   changeColor: 0
 --- !u!1001 &1701236986
 PrefabInstance:
@@ -16893,8 +16902,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16454329fd7144994badde15b0b592bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineManager
-  outlineColor: {r: 0.49685526, g: 0.49685526, b: 0.49685526, a: 1}
-  newLookColor: {r: 1, g: 1, b: 1, a: 0}
+  _spriteSheet: []
+  outlineColor: []
+  newLookColor: []
   changeColor: 0
 --- !u!1 &1791400383
 GameObject:
@@ -17213,8 +17223,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16454329fd7144994badde15b0b592bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineManager
-  outlineColor: {r: 0.54088044, g: 0.54088044, b: 0.54088044, a: 1}
-  newLookColor: {r: 1, g: 1, b: 1, a: 0}
+  _spriteSheet: []
+  outlineColor: []
+  newLookColor: []
   changeColor: 0
 --- !u!1 &1917272336
 GameObject:
@@ -40727,8 +40738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16454329fd7144994badde15b0b592bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OutlineManager
-  outlineColor: {r: 0.54088044, g: 0.54088044, b: 0.54088044, a: 1}
-  newLookColor: {r: 1, g: 1, b: 1, a: 0}
+  _spriteSheet: []
+  outlineColor: []
+  newLookColor: []
   changeColor: 0
 --- !u!1 &2075228610
 GameObject:
