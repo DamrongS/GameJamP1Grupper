@@ -258,8 +258,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> Stashed changes
 --- !u!1 &767339753
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +470,10 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+<<<<<<< Updated upstream
 >>>>>>> 4968d1f25703cbc2ffb84a17c122683db7a69901
+=======
+>>>>>>> Stashed changes
 --- !u!1 &893186690
 GameObject:
   m_ObjectHideFlags: 0
