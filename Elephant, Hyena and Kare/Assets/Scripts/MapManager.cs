@@ -7,9 +7,6 @@ public class MapManager : MonoBehaviour
     public Transform player;
     public int amountOfLevels;
     public float movementSpeed;
-
-    private float timer = 0f;
-    
     private InputAction moveRight;
     private InputAction moveLeft;
     private InputAction enterLevel;

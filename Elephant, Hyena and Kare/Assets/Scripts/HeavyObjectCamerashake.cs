@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Unity.Cinemachine;
 
@@ -5,10 +7,12 @@ public class HeavyObjectCamerashake : MonoBehaviour
 {
     [Header("Shake Conditions")]
     public float minimumImpactSpeed;
+    public bool allowSlideRumble = false;
     public string impactTag;
 
     [Header("Shake Conditions")]
     public AudioClip groundHitSound;
+    public AudioClip groundPushSound;
     public float volume = 0.3f;
 
     [Header("Shake Settings")]
@@ -18,6 +22,9 @@ public class HeavyObjectCamerashake : MonoBehaviour
 
     private CinemachineImpulseSource impulseSource;
     private AudioSource audioSource;
+    private IEnumerator coroutine;
+    private bool isSliding = false;
+    private bool canSlide = false;
 
     [SerializeField]
     private AnimationCurve customCurve = new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(0.2f, -0.3f), new Keyframe(0.45f, 1f), new Keyframe(1f, 0f));
@@ -41,37 +48,75 @@ public class HeavyObjectCamerashake : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.gameObject.CompareTag(impactTag))
+        if (collision.gameObject.CompareTag(impactTag))
         {
-            return;
+            float impactSpeed = collision.relativeVelocity.magnitude;
+
+            Debug.Log(impactSpeed);
+
+            if (impactSpeed >= minimumImpactSpeed)
+            {
+                CameraShake();
+                audioSource.clip = groundHitSound;
+                audioSource.loop = false;
+                audioSource.Play();
+            }
         }
 
-        float impactSpeed = collision.relativeVelocity.magnitude;
-
-        Debug.Log(impactSpeed);
-
-        if (impactSpeed >= minimumImpactSpeed)
+        if (collision.gameObject.CompareTag("Elephant") && allowSlideRumble)
         {
-            CameraShake();
-            audioSource.clip = groundHitSound;
-            audioSource.Play();
+            float impactSpeed = collision.relativeVelocity.magnitude;
+        
+            Debug.Log(impactSpeed);
+        
+            if (impactSpeed >= minimumImpactSpeed)
+            {
+                Debug.Log("Reached SlideCameraShake");
+                isSliding = true;
+                audioSource.clip = groundPushSound;
+                audioSource.volume = 0.3f;
+                audioSource.loop = true;
+                audioSource.Play();
+                StartCoroutine(SlideShake());
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Elephant"))
+        {
+            isSliding = false;
+            audioSource.Stop();
         }
     }
 
     public void CameraShake()
     {
         impulseSource.ImpulseDefinition.ImpulseShape = impulseShape;
-
-        impulseSource.ImpulseDefinition.ImpulseDuration = shakeDuration;
-
         // Sendes hvis man har brugt en custom shape
         if (impulseShape == CinemachineImpulseDefinition.ImpulseShapes.Custom)
         {
             impulseSource.ImpulseDefinition.CustomImpulseShape = customCurve;
         }
-
+        
+        impulseSource.ImpulseDefinition.ImpulseDuration = shakeDuration;
         impulseSource.DefaultVelocity = shakeIntensity;
-
+        
         impulseSource.GenerateImpulse();
+    }
+
+    IEnumerator SlideShake()
+    {
+        while (isSliding)
+        {
+            yield return new WaitForSeconds(0.2f);
+            
+            impulseSource.ImpulseDefinition.ImpulseShape = CinemachineImpulseDefinition.ImpulseShapes.Rumble;
+            impulseSource.ImpulseDefinition.ImpulseDuration = 0.2f;
+            impulseSource.DefaultVelocity = shakeIntensity;
+            
+            impulseSource.GenerateImpulse();
+        }
     }
 }
