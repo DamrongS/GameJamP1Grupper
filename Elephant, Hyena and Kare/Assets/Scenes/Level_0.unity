@@ -13940,15 +13940,10 @@ MonoBehaviour:
   moveDistance: -500
   pressurePlateMoveDis: 3
   MoveTimescale: 1
-<<<<<<< HEAD
-  audioSource: {fileID: 0}
-  audioClip: []
-=======
   audioSource: {fileID: 1596265108}
   audioClip:
   - {fileID: 8300000, guid: c402eca4b3a4bd24f804cf2382810db6, type: 3}
   - {fileID: 8300000, guid: fe9bb3aa405118a4c98d515016829ebe, type: 3}
->>>>>>> 203e6137bc1b350d053207aa3ab4a4f45a5fc293
 --- !u!61 &1596265107
 BoxCollider2D:
   m_ObjectHideFlags: 0
