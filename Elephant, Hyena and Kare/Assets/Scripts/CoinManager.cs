@@ -7,11 +7,11 @@ public class CoinManager : MonoBehaviour
     
     void Start()
     {
-        coinText.text = "Score: " + totalCoins; // what the UI displays 
+        coinText.text = ": " + totalCoins; // what the UI displays 
     }
     public void ChangedCoins(int amount)
     {
         totalCoins += amount;
-        coinText.text = "Score: " + totalCoins; // what the UI displays
+        coinText.text = ": " + totalCoins; // what the UI displays
     }
 }
