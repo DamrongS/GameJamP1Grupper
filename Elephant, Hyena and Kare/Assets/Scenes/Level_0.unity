@@ -1583,6 +1583,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: ecce5618719da3a4dbdcb2f9f8f48191, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1596265108}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: ecce5618719da3a4dbdcb2f9f8f48191, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1596265109}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: ecce5618719da3a4dbdcb2f9f8f48191, type: 3}
 --- !u!1 &578319753
 GameObject:
@@ -13937,9 +13940,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pressurePlate
   objectToMove: {fileID: 1075587298}
-  moveDistance: -500
-  pressurePlateMoveDis: 3
-  MoveTimescale: 1
+  moveDistance: -6
+  pressurePlateMoveDis: 20
+  MoveTimescale: 2
   audioSource: {fileID: 1596265108}
   audioClip:
   - {fileID: 8300000, guid: c402eca4b3a4bd24f804cf2382810db6, type: 3}
@@ -14087,6 +14090,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1596265109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596265103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16454329fd7144994badde15b0b592bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineManager
+  _spriteSheet:
+  - {fileID: -8328923581568760697, guid: ecce5618719da3a4dbdcb2f9f8f48191, type: 3}
+  outlineColor:
+  - {r: 0, g: 0, b: 0, a: 1}
+  newLookColor:
+  - {r: 1, g: 1, b: 1, a: 1}
+  changeColor: 1
 --- !u!4 &1617607571 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 194991059353069982, guid: 1c8e7574578af6045ba2b19a51c03314, type: 3}
