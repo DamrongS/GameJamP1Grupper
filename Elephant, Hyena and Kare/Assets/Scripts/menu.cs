@@ -5,6 +5,13 @@ public class menu : MonoBehaviour
 {
     public void Playgame()
     {
-        SceneManager.LoadScene("Level_1");
+        if (!PlayerPrefs.HasKey("LevelsUnlocked"))
+        {
+            PlayerPrefs.SetInt("LevelsUnlocked", 1);
+            PlayerPrefs.SetInt("LastLevelCompleted", 0);
+            PlayerPrefs.Save();
+        }
+
+        SceneManager.LoadScene("LevelOverview");
     }
 }

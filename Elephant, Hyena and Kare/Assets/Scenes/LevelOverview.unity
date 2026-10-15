@@ -980,8 +980,8 @@ MonoBehaviour:
   - {fileID: -5115403669998444756, guid: 4cd856d3403d44768b685bf0008a28a7, type: 3}
   - {fileID: 2128460524995828793, guid: 6995c9b84a06241158cee01d37642a21, type: 3}
   mapSpriteRenderer: {fileID: 914559101}
-  pPrefsUnlockedLevels: 3
-  pPrefsCurrentCompleted: 2
+  pPrefsUnlockedLevels: 2
+  pPrefsCurrentCompleted: 1
 --- !u!114 &1389576139
 MonoBehaviour:
   m_ObjectHideFlags: 0
