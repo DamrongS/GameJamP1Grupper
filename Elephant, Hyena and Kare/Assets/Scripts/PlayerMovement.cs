@@ -1,3 +1,4 @@
+using System;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -36,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Elephant") || collision.CompareTag("Hyena")) return;
+        if(collision.CompareTag("Elephant") || collision.CompareTag("Hyeana")) return;
 
         if(collision.CompareTag("Ground"))
         {
@@ -53,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if((collision.CompareTag("Elephant") || collision.CompareTag("Hyena")) && touchingPlatform) return;
+        if((collision.CompareTag("Elephant") || collision.CompareTag("Hyeana")) && touchingPlatform) return;
 
         if(collision.CompareTag("Ground"))
         {
@@ -68,7 +69,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    private void OnTriggerStay2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Water") && this.gameObject.CompareTag("Hyeana"))
+        {
+            
+        }
+    }
+    
     void FixedUpdate()
     {
         float dt = Time.deltaTime;
@@ -144,6 +152,5 @@ public class PlayerMovement : MonoBehaviour
         {
             showSignifier = true;
         }
-
     }
 }

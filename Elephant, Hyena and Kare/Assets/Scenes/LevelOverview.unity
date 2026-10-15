@@ -389,8 +389,8 @@ Transform:
   m_GameObject: {fileID: 914559100}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: -0.08, z: 1}
-  m_LocalScale: {x: 18, y: 10, z: 1}
+  m_LocalPosition: {x: 0.0237, y: -0.0029, z: 1}
+  m_LocalScale: {x: 17.827763, y: 10.154, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -836,6 +836,7 @@ MonoBehaviour:
   player: {fileID: 1485442661}
   amountOfLevels: 4
   movementSpeed: 15
+  playerPrefsTestNumber: 1
 --- !u!114 &1389576139
 MonoBehaviour:
   m_ObjectHideFlags: 0
