@@ -103,7 +103,7 @@ ScriptedImporter:
     addShadowCasters: 0
     generateIndividualEvents: 1
     generateSpriteAtlas: 1
-  platformSettingsDirtyTick: 639275743512754714
+  platformSettingsDirtyTick: 639276569569054085
   singleSpriteImportData:
   - name: 
     originalName: 
@@ -139,7 +139,7 @@ ScriptedImporter:
       y: 4
       width: 49
       height: 50
-    spriteID: a7164b80d3416a34d96301393eec81b6
+    spriteID: cf818147dcb36d34ab0a51e8ea67a26d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -171,7 +171,7 @@ ScriptedImporter:
         y: 0
         width: 49
         height: 50
-      spriteId: a7164b80d3416a34d96301393eec81b6
+      spriteId: cf818147dcb36d34ab0a51e8ea67a26d
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
