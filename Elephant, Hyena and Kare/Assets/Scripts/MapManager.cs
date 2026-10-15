@@ -8,6 +8,8 @@ public class MapManager : MonoBehaviour
     public Transform player;
     public int amountOfLevels;
     public float movementSpeed;
+    public Sprite[] mapsTextures;
+    public SpriteRenderer mapSpriteRenderer;
 
     [Header("Debug Settings - !DNT!")]
     public int playerPrefsTestNumber;
@@ -37,6 +39,10 @@ public class MapManager : MonoBehaviour
 
         _unlockedLevels = PlayerPrefs.GetInt("LevelsUnlocked");
         Debug.Log(_unlockedLevels);
+
+        mapSpriteRenderer.sprite = mapsTextures[_unlockedLevels - 1];
+        player.transform.position = GameObject.Find($"Level_{_unlockedLevels}").transform.position;
+        _nextPos = _unlockedLevels;
     }
 
     void Update()
