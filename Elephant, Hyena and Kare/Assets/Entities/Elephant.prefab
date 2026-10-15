@@ -492,7 +492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   movementType: ElephantMovement
   movementSpeed: 150
-  jumpPower: 250
+  jumpPower: 350
   onGround: 0
   jumping: 0
   canJump: 1
