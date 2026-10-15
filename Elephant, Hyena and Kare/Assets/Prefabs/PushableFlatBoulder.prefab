@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: 3cf72b307641d034984c86050195cad7, type: 3}
       propertyPath: m_Name
-      value: boulder_bigboy
+      value: PushableFlatBoulder
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: 3cf72b307641d034984c86050195cad7, type: 3}
       propertyPath: m_TagString
@@ -175,8 +175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14eb19bc1d14490aae20fce508e1429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeavyObjectCamerashake
-  minimumImpactSpeed: 1
-  minimumSlideSpeed: 1
+  minimumImpactSpeed: 5
+  minimumSlideSpeed: 2
   allowSlideRumble: 1
   impactTag: Ground
   groundHitSound: {fileID: 8300000, guid: da53ce19ee2851d4999ec71acf137a21, type: 3}

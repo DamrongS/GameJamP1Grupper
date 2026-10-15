@@ -133,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
         }
-        Debug.Log($"velocityY: {_rigidbody2d.linearVelocityY}");
+        // Debug.Log($"velocityY: {_rigidbody2d.linearVelocityY}");
     }
 
     void Update()
