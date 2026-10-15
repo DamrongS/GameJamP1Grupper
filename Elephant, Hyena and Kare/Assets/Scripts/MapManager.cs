@@ -4,15 +4,21 @@ using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
 {
+    [Header("Map Settings")]
     public Transform player;
     public int amountOfLevels;
     public float movementSpeed;
+
+    [Header("Debug Settings - !DNT!")]
+    public int playerPrefsTestNumber;
+    
     private InputAction moveRight;
     private InputAction moveLeft;
     private InputAction enterLevel;
     
     private int _currentPos = 1;
     private int _nextPos = 1;
+    private int _unlockedLevels = 1;
 
     private bool isCurrentlyMoving = false;
     
@@ -28,11 +34,14 @@ public class MapManager : MonoBehaviour
         
         Debug.Log(GameObject.Find("Level_1").transform.position);
         player.position = GameObject.Find("Level_1").transform.position;
+
+        _unlockedLevels = PlayerPrefs.GetInt("LevelsUnlocked");
+        Debug.Log(_unlockedLevels);
     }
 
     void Update()
     {
-        if (moveRight.WasPressedThisFrame() && _currentPos < amountOfLevels && isCurrentlyMoving == false)
+        if (moveRight.WasPressedThisFrame() && _currentPos < amountOfLevels && isCurrentlyMoving == false && _currentPos <= _unlockedLevels - 1)
         {
             _nextPos++;
             Debug.Log(_nextPos);
@@ -61,5 +70,13 @@ public class MapManager : MonoBehaviour
         {
             SceneManager.LoadScene($"Level_{_currentPos}");
         }
+    }
+
+    public void SavePlayerPrefs()
+    {
+        PlayerPrefs.SetInt("LevelsUnlocked", playerPrefsTestNumber);
+        _unlockedLevels = PlayerPrefs.GetInt("LevelsUnlocked");
+        Debug.Log(PlayerPrefs.GetInt("LevelsUnlocked"));
+        PlayerPrefs.Save();
     }
 }
