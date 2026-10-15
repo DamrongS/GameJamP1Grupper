@@ -12,7 +12,7 @@ public class jumptrough : MonoBehaviour
         enabeld = false;
         foreach (Transform child in gameObject.transform)
         {
-            if (child.tag != "Hyaena") // så that the Hyaena dosen't disapper when the platform is disabled
+            if (child.tag != "Hyena") // så that the Hyaena dosen't disapper when the platform is disabled
             {
                 child.gameObject.SetActive(enabeld);
             }
