@@ -11,7 +11,7 @@ public class pressurePlate : MonoBehaviour
     private Vector3 originalPosition;
     public float MoveTimescale = 1;
     public AudioSource audioSource;
-    public AudioClip audioClip;
+    public AudioClip[] audioClip;
 
     Vector3 currentVelocity;
 
@@ -35,7 +35,9 @@ public class pressurePlate : MonoBehaviour
             //transform.Translate(Vector2.up * pressurePlateMoveDis * Time.deltaTime);
             audioSource = gameObject.GetComponent<AudioSource>();
             originalPosition = objectToMove.transform.position;
-            audioSource.PlayOneShot(audioClip, 1);
+            for(int i = 0; i < audioClip.Length; i++){
+                audioSource.PlayOneShot(audioClip[i], 1);
+            }
             hasInteracted = true;
         }
 
