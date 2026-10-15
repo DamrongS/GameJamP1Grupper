@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float signifierTimer = 0;
     private bool touchingPlatform = false;
+    private bool allowMovement = true;
 
     void Start()
     {
