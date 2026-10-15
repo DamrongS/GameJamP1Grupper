@@ -12,6 +12,8 @@ TagManager:
   - Solid
   - PitBottom
   - slideOffTrigger
+  - Platform
+  - Water
   layers:
   - Default
   - TransparentFX
