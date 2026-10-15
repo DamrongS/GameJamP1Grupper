@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4164096187151910257}
   - component: {fileID: 9118031000725122243}
   m_Layer: 0
-  m_Name: dry_tree3 (1)_0
+  m_Name: PushableDryTree
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
