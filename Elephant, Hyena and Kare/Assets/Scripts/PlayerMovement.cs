@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public float showSignifierAfter;
 
     private float signifierTimer = 0;
+    private bool touchingPlatform = false;
 
     void Start()
     {
@@ -35,21 +36,35 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        onGround = true;
+        if(collision.CompareTag("Elephant") || collision.CompareTag("Hyena")) return;
+
+        if(collision.CompareTag("Ground"))
+        {
+            onGround = true;
+        }
+
         if (collision.CompareTag("Platform") && movementType != "ElephantMovement")
         {
             transform.SetParent(collision.transform);
-            _rigidbody2d.bodyType = RigidbodyType2D.Kinematic;
+            touchingPlatform = true;
+            onGround = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        onGround = false;
+        if((collision.CompareTag("Elephant") || collision.CompareTag("Hyena")) && touchingPlatform) return;
+
+        if(collision.CompareTag("Ground"))
+        {
+            onGround = false;
+        }
+
         if (collision.CompareTag("Platform") && movementType != "ElephantMovement")
         { 
             transform.SetParent(null);
-            _rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
+            touchingPlatform = false;
+            onGround = false;
         }
     }
 
@@ -78,9 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
         _animator.SetBool("isWalking", isMoving);
         _animator.SetBool("isJumping", _rigidbody2d.linearVelocityY > 0);
-        _animator.SetBool("isFalling", _rigidbody2d.linearVelocityY < 0);
-
-        // Debug.Log(_rigidbody2d.linearVelocityY > 0);
+        _animator.SetBool("isFalling", _rigidbody2d.linearVelocityY < 0 && !touchingPlatform);
 
         if (isMoving)
         {
@@ -102,6 +115,15 @@ public class PlayerMovement : MonoBehaviour
         {
             _spriteRenderer.flipX = true;
         }
+
+        if(touchingPlatform && !isMoving)
+        {
+            _rigidbody2d.bodyType = RigidbodyType2D.Kinematic;
+        } 
+        else
+        {
+            _rigidbody2d.bodyType = RigidbodyType2D.Dynamic;
+        }
     }
 
     void Update()
@@ -122,5 +144,6 @@ public class PlayerMovement : MonoBehaviour
         {
             showSignifier = true;
         }
+
     }
 }
