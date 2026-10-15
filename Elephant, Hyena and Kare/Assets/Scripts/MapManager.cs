@@ -29,7 +29,6 @@ public class MapManager : MonoBehaviour
     
     void Start()
     {
-        // Set up input actions
         moveRight = InputSystem.actions.FindAction("MoveRight");
         moveLeft = InputSystem.actions.FindAction("MoveLeft");
         enterLevel = InputSystem.actions.FindAction("EnterLevel");
@@ -38,7 +37,6 @@ public class MapManager : MonoBehaviour
         moveLeft.Enable();
         enterLevel.Enable();
 
-        // Load saved progress
         _unlockedLevels = Mathf.Clamp(
             PlayerPrefs.GetInt("LevelsUnlocked", 1), 1, amountOfLevels
         );
@@ -46,22 +44,16 @@ public class MapManager : MonoBehaviour
         pPrefsUnlockedLevels = _unlockedLevels;
         pPrefsCurrentCompleted = PlayerPrefs.GetInt("LastLevelCompleted", 0);
 
-        // Set map texture based on unlocked levels
         mapSpriteRenderer.sprite = mapsTextures[_unlockedLevels - 1];
 
-        // Spawn at the level just completed
         _currentPos = Mathf.Clamp(pPrefsCurrentCompleted, 1, _unlockedLevels);
 
-        // Synchronize positions to prevent automatic movement
         _nextPos = _currentPos;
 
-        // Set player position instantly
         player.position = GameObject.Find($"Level_{_currentPos}").transform.position;
 
-        // Reset movement state
         isCurrentlyMoving = false;
 
-        // Debug information
         Debug.Log($"Current Position: {_currentPos}");
         Debug.Log($"Next Position: {_nextPos}");
         Debug.Log($"Levels Unlocked: {_unlockedLevels}");
@@ -71,7 +63,6 @@ public class MapManager : MonoBehaviour
     
     void Update()
     {
-        // Ignore movement until both keys have been released
         if (waitingForInputRelease)
         {
             if (moveRight.IsPressed() || moveLeft.IsPressed())
@@ -79,12 +70,10 @@ public class MapManager : MonoBehaviour
                 return;
             }
 
-            // Both keys released, movement is now allowed
             waitingForInputRelease = false;
             return;
         }
 
-        // Handle movement input
         if (moveRight.WasPressedThisFrame() &&
             _currentPos < amountOfLevels &&
             !isCurrentlyMoving &&
@@ -99,7 +88,6 @@ public class MapManager : MonoBehaviour
             _nextPos--;
         }
 
-        // Move player between map positions
         if (_nextPos != _currentPos)
         {
             Vector3 desPos = GameObject.Find($"Level_{_nextPos}").transform.position;
@@ -119,8 +107,7 @@ public class MapManager : MonoBehaviour
                 isCurrentlyMoving = false;
             }
         }
-
-        // Enter selected level
+        
         if (enterLevel.WasPressedThisFrame() && !isCurrentlyMoving)
         {
             SceneManager.LoadScene($"Level_{_currentPos - 1}");
@@ -134,7 +121,6 @@ public class MapManager : MonoBehaviour
         PlayerPrefs.SetInt("LastLevelCompleted", pPrefsCurrentCompleted);
         PlayerPrefs.Save();
 
-        // Refresh map
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
