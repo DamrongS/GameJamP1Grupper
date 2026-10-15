@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class MapManager : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class MapManager : MonoBehaviour
     public SpriteRenderer mapSpriteRenderer;
 
     [Header("Debug Settings - !DNT!")]
-    public int playerPrefsTestNumber;
+    public int pPrefsUnlockedLevels;
+    public int pPrefsCurrentCompleted;
     
     private InputAction moveRight;
     private InputAction moveLeft;
@@ -41,8 +43,8 @@ public class MapManager : MonoBehaviour
         Debug.Log(_unlockedLevels);
 
         mapSpriteRenderer.sprite = mapsTextures[_unlockedLevels - 1];
-        player.transform.position = GameObject.Find($"Level_{_unlockedLevels}").transform.position;
-        _nextPos = _unlockedLevels;
+        player.transform.position = GameObject.Find($"Level_{pPrefsCurrentCompleted}").transform.position;
+        _nextPos = pPrefsCurrentCompleted;
     }
 
     void Update()
@@ -80,7 +82,8 @@ public class MapManager : MonoBehaviour
 
     public void SavePlayerPrefs()
     {
-        PlayerPrefs.SetInt("LevelsUnlocked", playerPrefsTestNumber);
+        PlayerPrefs.SetInt("LevelsUnlocked", pPrefsUnlockedLevels);
+        PlayerPrefs.SetInt("LastLevelCompleted", pPrefsCurrentCompleted);
         _unlockedLevels = PlayerPrefs.GetInt("LevelsUnlocked");
         Debug.Log(PlayerPrefs.GetInt("LevelsUnlocked"));
         PlayerPrefs.Save();
