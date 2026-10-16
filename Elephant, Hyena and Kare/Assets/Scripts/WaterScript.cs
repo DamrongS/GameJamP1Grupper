@@ -22,7 +22,7 @@ public class WaterScript : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collider)
     {
-        if (collider.gameObject.CompareTag("Elephant"))
+        if (collider.gameObject.CompareTag("Elephant") && !collider.isTrigger)
         {
             // Debug.Log("Elephant entered Water!");
             
@@ -39,7 +39,7 @@ public class WaterScript : MonoBehaviour
                 Debug.Log("Drowning elephant!");
                 rB2D.linearVelocity = (new Vector2(rB2D.linearVelocityX, -drownForce));
             }
-        } else if (collider.gameObject.CompareTag("Hyeana"))
+        } else if (collider.gameObject.CompareTag("Hyeana") && !collider.isTrigger)
         {
             // Debug.Log("Hyena entered Water!");
             
@@ -49,10 +49,6 @@ public class WaterScript : MonoBehaviour
 
             if (collider.bounds.center.y < waterSurface && !willDrownHyena)
             {
-                // Debug.Log("Floating hyena!");
-                rB2D.linearVelocity = (new Vector2(rB2D.linearVelocityX, pushForce));
-            } else if (collider.bounds.center.y < waterSurface && willDrownHyena)
-            {
                 Debug.Log("Drowning hyena!");
                 rB2D.linearVelocity = (new Vector2(rB2D.linearVelocityX, -drownForce));
             }
@@ -61,10 +57,10 @@ public class WaterScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Elephant"))
+        if (col.gameObject.CompareTag("Elephant") && !col.isTrigger)
         {
             drownCoroutineE = StartCoroutine(DrownTimerElephant(drownTimeElephant));
-        } else if (col.gameObject.CompareTag("Hyeana"))
+        } else if (col.gameObject.CompareTag("Hyeana") && !col.isTrigger)
         {
             drownCoroutineH = StartCoroutine(DrownTimerHyena(drownTimeHyena));
         }
@@ -72,7 +68,7 @@ public class WaterScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Elephant"))
+        if (col.gameObject.CompareTag("Elephant") && !col.isTrigger)
         {
             if (drownCoroutineE != null)
             {
@@ -82,7 +78,7 @@ public class WaterScript : MonoBehaviour
 
             willDrownElephant = false;
         }
-        else if (col.gameObject.CompareTag("Hyeana"))
+        else if (col.gameObject.CompareTag("Hyeana") && !col.isTrigger)
         {
             if (drownCoroutineH != null)
             {
