@@ -48,6 +48,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: 1Sky
+    uniqueID: 512740407
+    locked: 0
+  - name: 2Mountains
+    uniqueID: 2089142193
+    locked: 0
   - name: Background
     uniqueID: 3844025405
     locked: 0
