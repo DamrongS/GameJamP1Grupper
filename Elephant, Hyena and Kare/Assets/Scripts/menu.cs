@@ -12,6 +12,6 @@ public class menu : MonoBehaviour
             PlayerPrefs.Save();
         }
 
-        SceneManager.LoadScene("LevelOverview");
+        SceneManager.LoadScene("intro");
     }
 }
