@@ -7,7 +7,7 @@ public class AutoReload : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Hyeana") || (other.gameObject.CompareTag("Elephant")))
         {
-            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
