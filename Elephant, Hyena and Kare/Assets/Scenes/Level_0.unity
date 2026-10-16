@@ -16559,6 +16559,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: R
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: a3a1e9d61b86f3f49b517421c2a1ede4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: a3a1e9d61b86f3f49b517421c2a1ede4, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
