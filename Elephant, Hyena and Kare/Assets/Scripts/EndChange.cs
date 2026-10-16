@@ -14,9 +14,7 @@ public class EndChange : MonoBehaviour
     {
         Debug.Log("Starting timer");
         yield return new WaitForSeconds(18f);
-
-
+        
         SceneManager.LoadScene("Menu");
     }
-
 }
