@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+   
     private void OnTriggerExit2D(Collider2D collision)
     {
         if((collision.CompareTag("Elephant") || collision.CompareTag("Hyeana")) && touchingPlatform) return;
@@ -75,6 +76,19 @@ public class PlayerMovement : MonoBehaviour
         if (collider.gameObject.CompareTag("Water") && this.gameObject.CompareTag("Hyeana"))
         {
             
+        }
+        if (collider.CompareTag("Elephant") || collider.CompareTag("Hyeana")) return;
+
+        if (collider.CompareTag("Ground"))
+        {
+            onGround = true;
+        }
+
+        if (collider.CompareTag("Platform") && movementType != "ElephantMovement")
+        {
+            transform.SetParent(collider.transform);
+            touchingPlatform = true;
+            onGround = true;
         }
     }
     
